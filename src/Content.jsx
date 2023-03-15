@@ -1,178 +1,151 @@
 export function Content() {
+  let student = {
+    first_name: "Michael",
+    last_name: "Scott",
+    email: "Michaelscott@dundermifflin.com",
+    phone_number: "888-555-5556",
+    short_bio: "I sell the best paper at the best paper company in the world.",
+    linkedin_url: "https://www.linkedin/in/michaelscott",
+  };
   return (
     <div>
       <link
-        href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic"
         rel="stylesheet"
         type="text/css"
+        href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css"
+        media="all"
       />
-
-      <div id="main_container">
-        <div id="header">
-          <div class="header_logotype_container">
-            <h1 class="logotype_name">
-              Matthew <span class="purple">Taylor</span>
-            </h1>
-            <h2 class="logotype_occupation">Frontend Web Developer</h2>
-          </div>
-          <div class="header_menu_container">
-            <div class="clear"></div>
-            <ul class="header_menu horizontal_list">
-              <li>
-                <a class="no_border purple" href="#">
-                  Profile
-                </a>
-              </li>
-              <li>
-                <a href="#">Education</a>
-              </li>
-              <li>
-                <a href="#">Skills</a>
-              </li>
-              <li>
-                <a href="#">Work Experience</a>
-              </li>
-              <li>
-                <a href="#">Featured Projects</a>
-              </li>
-              <li>
-                <a href="#">Awards</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div id="left_col">
-          <div class="profile_frame">
-            <div class="profile_picture"></div>
-            <img src="images/javier_latorre.jpg" alt="profile picture" />
-          </div>
-          <div class="hello_content">
-            <h2>Hello!</h2>
-            <p>
-              I'm passionate about technology and human behavior, hardworker and a fast-learner with experience in
-              around 10 different countries studying, working and volunteering.
-            </p>
-          </div>
-          <div class="contact_details_content">
-            <h2>Contact details</h2>
-            <p class="purple">Phone:</p>
-            <p>+34 123 456 789</p>
-            <p class="purple">Email:</p>
-            <p>jlalovi@gmail.com</p>
-            <p class="purple">Address:</p>
-            <p>Someplace, 5</p>
-            <p>Jaén, Spain</p>
-            <p>23001</p>
-          </div>
-          <a href="mailto:jlalovi@gmail.com" class="send_message_button">
-            <span class="cut1"></span>
-            <span class="cut2"></span>
-            <span class="content">
-              Send me a message <span class="fontawesome-double-angle-right"></span>
-            </span>
-          </a>
-          <div class="get_social_content">
-            <h2>Get social</h2>
-            <ul class="social_icons horizontal_list">
-              <li>
-                <a class="facebook" href="https://www.facebook.com/jlalovi">
-                  <span class="entypo-facebook-circled"></span>
-                  <span class="invisible">Facebook</span>
-                </a>
-              </li>
-              <li>
-                <a class="twitter" href="https://twitter.com/jlalovi">
-                  <span class="entypo-twitter-circled"></span>
-                  <span class="invisible">Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a class="linkedin" href="https://www.linkedin.com/in/jlalovi/en">
-                  <span class="entypo-linkedin-circled"></span>
-                  <span class="invisible">LinkedIn</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div id="content_container">
-          <div class="block">
-            <h1>Profile</h1>
-            <blockquote class="profile_quote">
-              <p>
-                "There is no end to education. It is not that you read a book, pass an examination, and finish with
-                education. The whole of life, from the moment you are born to the moment you die, is a process of
-                learning."
-              </p>
-              <p>Jiddu Krishnamurti.</p>
-              <span class="entypo-quote"></span>
-            </blockquote>
-          </div>
-          <div class="block">
-            <h2>A few words about me</h2>
-            <p>
-              Until now, in my life, I change from active moments with a lot of variety, challenges and improvisations,
-              to moments of tranquility and stability, being difficult to stay in a place during a long time. I consider
-              myself a tolerant and respectful person with open mind and quite honest. I really like to listen people
-              stories and backgrounds and their different experiences around the world.
-            </p>
-          </div>
-          <div class="horizontal_line">
-            <div class="line_left"></div>
-            <div class="left_circle"></div>
-            <div class="central_circle"></div>
-            <div class="right_circle"></div>
-            <div class="line_right"></div>
-          </div>
-          <div class="block">
-            <h2>Philosophy</h2>
-            <p>I belive in ethic and moral not in imposed rules that you "have to" do or follow.</p>
-            <div class="philosophy_content">
-              <p>
-                I believe life is made from different shades of grey, not from black and white. Furthermore, as a human
-                being with rationality, I think it is our duty to take care of the world and treat others as one would
-                like others to treat oneself. This way of perceiving reality affects my beliefs and my way of behaving.
-                Summarizing on several points:
-              </p>
-              <ul>
-                <li>Pragmatic</li>
-                <li>Honest</li>
-                <li>Respectful</li>
-                <li>Open-minded</li>
-                <li>Coherent</li>
-              </ul>
-              <div class="clear"></div>
+      <link rel="stylesheet" type="text/css" href="resume.css" media="all" />
+      <div id="doc2" class="yui-t7">
+        <div id="inner">
+          <div id="hd">
+            <div class="yui-gc">
+              <div class="yui-u first">
+                <h1>{`${student.first_name} ${student.last_name}`} </h1>
+                <h2>Web Developer, Software Engineer</h2>
+              </div>
+              <div class="yui-u">
+                <div class="contact-info">
+                  {/* <h3>
+                    <a id="pdf" href="#">
+                      Download PDF
+                    </a>
+                  </h3> */}
+                  <h3>
+                    <a href="#">LinkedIn</a>
+                  </h3>
+                  <h3>
+                    <a href="#">GitHub</a>
+                  </h3>
+                  <h3>
+                    <a href="#">Personal Website</a>
+                  </h3>
+                  <h3>
+                    <a href="#">{`${student.email}`}</a>
+                  </h3>
+                  <h3>{`${student.phone_number}`}</h3>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="horizontal_line">
-            <div class="line_left"></div>
-            <div class="left_circle"></div>
-            <div class="central_circle"></div>
-            <div class="right_circle"></div>
-            <div class="line_right"></div>
+          <div id="bd">
+            <div id="yui-main">
+              <div class="yui-b">
+                <div class="yui-gf">
+                  <div class="yui-u first">
+                    <h2>Profile</h2>
+                  </div>
+                  <div class="yui-u">
+                    <p class="enlarge">{`${student.short_bio}`}</p>
+                  </div>
+                </div>
+                <div class="yui-gf">
+                  <div class="yui-u first">
+                    <h2>Skills</h2>
+                  </div>
+                  <div class="yui-u">
+                    <div class="talent">
+                      <h2>Web Design</h2>
+                      <p>Assertively exploit wireless initiatives rather than synergistic core competencies. </p>
+                    </div>
+                    <div class="talent">
+                      <h2>Interface Design</h2>
+                      <p>Credibly streamline mission-critical value with multifunctional functionalities. </p>
+                    </div>
+                    <div class="talent">
+                      <h2>Project Direction</h2>
+                      <p>
+                        Proven ability to lead and manage a wide variety of design and development projects in team and
+                        independent situations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="yui-gf">
+                  <div class="yui-u first">
+                    <h2>Technical</h2>
+                  </div>
+                  <div class="yui-u">
+                    <ul class="talent">
+                      <li>XHTML</li>
+                      <li>CSS</li>
+                      <li class="last">Javascript</li>
+                    </ul>
+                    <ul class="talent">
+                      <li>Jquery</li>
+                      <li>PHP</li>
+                      <li class="last">CVS / Subversion</li>
+                    </ul>
+                    <ul class="talent">
+                      <li>OS X</li>
+                      <li>Windows XP/Vista</li>
+                      <li class="last">Linux</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="yui-gf">
+                  <div class="yui-u first">
+                    <h2>Experience</h2>
+                  </div>
+                  <div class="yui-u">
+                    <div class="job">
+                      <h2>A University</h2>
+                      <h3>Paleontologist</h3>
+                      <h4>August 2022 - Present</h4>
+                      <p>Doing dino thangs and teach. </p>
+                    </div>
+                    <div class="job">
+                      <h2>Ralph Lauren</h2>
+                      <h3>Buyer</h3>
+                      <h4>May 2017 - December 2019</h4>
+                      <p>Bought clothing for Ralph Lauren. </p>
+                    </div>
+                    <div class="job">
+                      <h2>Relaxi-Cab</h2>
+                      <h3>Taxi Driver</h3>
+                      <h4>January 2012 - April 2016</h4>
+                      <p>Drove a cab for mobile massages </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="yui-gf last">
+                  <div class="yui-u first">
+                    <h2>Education</h2>
+                  </div>
+                  <div class="yui-u">
+                    <h2>Louisiana State - Baton Rouge, LA </h2>
+                    <h3>
+                      BS: Computer Science &mdash; <strong>May 2005 - October 2010</strong>{" "}
+                    </h3>
+                    <h2>Mizzou High School- Townsend Hall Columbia, MO</h2>
+                    <h3>
+                      High School Diploma &mdash; <strong>April 2004 - August 2008</strong>{" "}
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="last block">
-            <h2>Interests & Hobbies</h2>
-            <p>
-              I'm passionate about technology and human behavior, both determine almost all my interests and hobbies:
-            </p>
-            <ul>
-              <li>Visiting new places</li>
-              <li>Meeting people</li>
-              <li>Having new experiences</li>
-              <li>Hiking and Biking</li>
-              <li>Web Developing</li>
-              <li>Computer Gamming</li>
-              <li>Manga and Anime</li>
-            </ul>
-          </div>
-        </div>
-        <div class="clear"></div>
-
-        <div id="footer">
-          <p class="footer_name">Javier Latorre CV 2015</p>
         </div>
       </div>
     </div>
