@@ -6,6 +6,8 @@ export function Content() {
     phone_number: "888-555-5556",
     short_bio: "I sell the best paper at the best paper company in the world.",
     linkedin_url: "https://www.linkedin/in/michaelscott",
+    personal_blog_website_url: "test.com",
+    github_url: "https://github.com/michaelscott",
   };
   return (
     <div>
@@ -32,13 +34,13 @@ export function Content() {
                     </a>
                   </h3> */}
                   <h3>
-                    <a href="#">LinkedIn</a>
+                    <a href="#">{`${student.linkedin_url}`}</a>
                   </h3>
                   <h3>
-                    <a href="#">GitHub</a>
+                    <a href="#">{`${student.github_url}`}</a>
                   </h3>
                   <h3>
-                    <a href="#">Personal Website</a>
+                    <a href="#">{`${student.personal_blog_website_url}`}</a>
                   </h3>
                   <h3>
                     <a href="#">{`${student.email}`}</a>
