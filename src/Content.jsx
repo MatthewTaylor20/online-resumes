@@ -104,7 +104,7 @@ export function Content() {
               <div className="yui-b">
                 <div className="yui-gf">
                   <div className="yui-u first">
-                    <h2>Profile</h2>
+                    <h2>Bio</h2>
                   </div>
                   <div className="yui-u">
                     <p className="enlarge">{`${student.short_bio}`}</p>
@@ -112,29 +112,19 @@ export function Content() {
                 </div>
                 <div className="yui-gf">
                   <div className="yui-u first">
-                    <h2>Skills</h2>
+                    <h2>Projects</h2>
                   </div>
                   <div className="yui-u">
-                    <div className="talent">
-                      <h2>Web Design</h2>
-                      <p>Assertively exploit wireless initiatives rather than synergistic core competencies. </p>
-                    </div>
-                    <div className="talent">
-                      <h2>Interface Design</h2>
-                      <p>Credibly streamline mission-critical value with multifunctional functionalities. </p>
-                    </div>
-                    <div className="talent">
-                      <h2>Project Direction</h2>
-                      <p>
-                        Proven ability to lead and manage a wide variety of design and development projects in team and
-                        independent situations.
-                      </p>
+                    <div className="job">
+                      <h2>{`Convos`}</h2>
+                      <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="tree image" />
+                      <p>{`Here are a whole lot of details about the project!`} </p>
                     </div>
                   </div>
                 </div>
                 <div className="yui-gf">
                   <div className="yui-u first">
-                    <h2>Technical</h2>
+                    <h2>Skills</h2>
                   </div>
                   <div className="yui-u">
                     <ul className="talent">
@@ -172,6 +162,7 @@ export function Content() {
                       }
                     })} */}
                     {/* // remove reverse function // */}
+
                     {experiences.map((experience) => {
                       return (
                         <div className="job" key={experience.id}>
