@@ -55,6 +55,15 @@ export function Content() {
         details: "The school is fluent in Japanese, and allows everyone to eat bagel bites.",
       },
     ],
+    capstones: [
+      {
+        id: 1,
+        name: "beepbeep",
+        description: "Here are a whole lot of details about the project!",
+        url: "",
+        screenshot: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+      },
+    ],
   };
   let experiences = student.experiences.reverse();
   let educations = student.educations.reverse();
@@ -115,11 +124,15 @@ export function Content() {
                     <h2>Projects</h2>
                   </div>
                   <div className="yui-u">
-                    <div className="job">
-                      <h2>{`Convos`}</h2>
-                      <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="tree image" />
-                      <p>{`Here are a whole lot of details about the project!`} </p>
-                    </div>
+                    {student.capstones.map((capstone) => {
+                      return (
+                        <div className="job" key={capstone.id}>
+                          <h2>{`${capstone.name}`}</h2>
+                          <img src={capstone.screenshot} alt="tree image" />
+                          <p>{capstone.description} </p>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
                 <div className="yui-gf">
