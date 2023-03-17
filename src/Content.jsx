@@ -64,9 +64,50 @@ export function Content() {
         screenshot: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
       },
     ],
+    skills: [
+      {
+        id: 1,
+        name: "Ruby",
+      },
+      {
+        id: 2,
+        name: "javascript",
+      },
+      {
+        id: 3,
+        name: "react",
+      },
+      {
+        id: 4,
+        name: "HTML",
+      },
+      {
+        id: 5,
+        name: "CSS",
+      },
+    ],
   };
   let experiences = student.experiences.reverse();
   let educations = student.educations.reverse();
+  let lastExperience = experiences.pop();
+  let lastEducation = educations.pop();
+  let lastCapstone = student.capstones.pop();
+  let extras = 0;
+  if (student.skills.length % 3 === 0) {
+    extras = 0;
+  } else {
+    extras = 3 - (student.skills.length % 3);
+  }
+  console.log(`extras: ${extras}`);
+  for (var i = 0; i < extras; i++) {
+    student.skills.push("");
+  }
+  let lastSkills = [];
+  for (var j = 0; j < 3; j++) {
+    let lastSkill = student.skills.pop();
+    lastSkills.push(lastSkill);
+  }
+
   return (
     <div>
       <link
@@ -133,6 +174,11 @@ export function Content() {
                         </div>
                       );
                     })}
+                    <div className="job last" key={lastCapstone.id}>
+                      <h2>{`${lastCapstone.name}`}</h2>
+                      <img src={lastCapstone.screenshot} alt="tree image" />
+                      <p>{lastCapstone.description} </p>
+                    </div>
                   </div>
                 </div>
                 <div className="yui-gf">
@@ -140,21 +186,24 @@ export function Content() {
                     <h2>Skills</h2>
                   </div>
                   <div className="yui-u">
-                    <ul className="talent">
-                      <li>XHTML</li>
-                      <li>CSS</li>
-                      <li className="last">Javascript</li>
-                    </ul>
-                    <ul className="talent">
-                      <li>Jquery</li>
-                      <li>PHP</li>
-                      <li className="last">CVS / Subversion</li>
-                    </ul>
-                    <ul className="talent">
-                      <li>OS X</li>
-                      <li>Windows XP/Vista</li>
-                      <li className="last">Linux</li>
-                    </ul>
+                    {student.skills.map((skill) => {
+                      return (
+                        <div>
+                          <ul className="talent">
+                            <li>{skill.name}</li>
+                          </ul>
+                        </div>
+                      );
+                    })}
+                    {lastSkills.map((skill) => {
+                      return (
+                        <div>
+                          <ul className="talent">
+                            <li className="last">{skill.name}</li>
+                          </ul>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
                 <div className="yui-gf">
@@ -186,6 +235,12 @@ export function Content() {
                         </div>
                       );
                     })}
+                    <div className="job last" key={lastExperience.id}>
+                      <h2>{`${lastExperience.job_title}`}</h2>
+                      <h3>{`${lastExperience.company_name}`}</h3>
+                      <h4>{`${lastExperience.start_date} - ${lastExperience.end_date}`} </h4>
+                      <p>{`${lastExperience.details}`} </p>
+                    </div>
                   </div>
                 </div>
                 <div className="yui-gf last">
@@ -204,6 +259,13 @@ export function Content() {
                         </div>
                       );
                     })}
+                    <div className="job last" key={lastEducation.id}>
+                      <h2>
+                        {`${lastEducation.university_name}`} - {`${lastEducation.degree}`}
+                      </h2>
+                      <h4>{`${lastEducation.start_date} - ${lastEducation.end_date}`} </h4>
+                      <h5>{`${lastEducation.details}`}</h5>
+                    </div>
                   </div>
                 </div>
               </div>
