@@ -141,7 +141,6 @@ export function StudentsShow() {
             <div className="yui-gc">
               <div className="yui-u first">
                 <h1>{`${student.first_name} ${student.last_name}`} </h1>
-                <h2>Web Developer, Software Engineer</h2>
               </div>
               <div className="yui-u">
                 <div className="contact-info">
